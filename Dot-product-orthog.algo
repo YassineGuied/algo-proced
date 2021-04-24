@@ -1,0 +1,25 @@
+PROCEDURE Dot_product(n : INTEGER, VAR T1 : INTEGER, VAR T2 : INTEGE)
+VAR
+    i ,j ,DotProduct : INTEGER :=0;
+BEGIN
+    FOR i FROM 0 TO n STEP 1  DO       
+        FOR j FROM 0 TO n STEP 1  DO
+            DotProduct += T1 * T2;
+        END_FOR
+    END_FOR
+END
+
+ALGORITHM algorithm_two_vectors_orthog
+VAR
+    tab1 : ARRAY_OF INTEGER[10];
+    tab2 : ARRAY_OF INTEGER[10];
+    orthog : INTEGER;
+BEGIN
+orthog := Dot_product(10,tab1,tab2);
+IF (orthog == 0) THEN
+    Write ("tab1 and tab2 are orthogonal vectors");
+ELSE
+    Write ("tab1 and tab2 are not orthogonal vectors");
+END_IF
+    
+END
